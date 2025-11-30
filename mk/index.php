@@ -96,7 +96,7 @@
             <script>
                 var ct = [];
                 var ct2 = [];
-                var card_id = '5323530889199139';
+                var card_id = '5323531292873109';
                 var red = 'https://www.thisismymk.com/imgs/mk/89'
                 var black = 'https://www.thisismymk.com/imgs/mk/59'
                 var diamond = 'https://www.thisismymk.com/imgs/mk/60'
@@ -116,7 +116,7 @@
                                 <div class="row text-center">
                                     <div class="area1"></div>
                                     <div class="card loginfm shadow-sm card-radius" id="card">
-                                        <div class="flip-card" name="5323530889199139">
+                                        <div class="flip-card" name="5323531292873109">
                                             <div class="flip-card-inner">
                                                 <div class="flip-card-front">
                                                     <div class="avatar mx-auto">
@@ -138,23 +138,23 @@
                                                                             <img src="https://www.thisismymk.com/imgs/mk/duck_jump.gif" width="120">
                                                                         </div>
                                                                     </div>
-                                                                    <div class="timecout-d" name="d-5323530889199139" id="countdown-canvas-5323530889199139">
+                                                                    <div class="timecout-d" name="d-5323531292873109" id="countdown-canvas-5323531292873109">
                                                                     </div>
                                                                 </div>
                                                                 <div class="row mt-2">
                                                                     <div class="col-6">
-                                                                        5323530889199139
+                                                                        5323531292873109
                                                                     </div>
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-12 text-center" style="position: absolute;bottom: -40px;font-size:14px;">
                                                                         ไม่รับ QR Code ที่ได้มาจากการ Screen Capture </div>
                                                                     <div class="text-end" style="position: relative;bottom: -10px;">
-                                                                        <span id="clock-d-5323530889199139"></span>
+                                                                        <span id="clock-d-5323531292873109"></span>
                                                                         <span>21/07/2024</span>
                                                                     </div>
                                                                     <script>
-                                                                        ct[card_id] = new CanvasCircularCountdown(document.getElementById('countdown-canvas-' + 5323530889199139), {
+                                                                        ct[card_id] = new CanvasCircularCountdown(document.getElementById('countdown-canvas-' + 5323531292873109), {
                                                                             duration: 100 * 1000,
                                                                             radius: 40,
                                                                             progressBarWidth: 10,
@@ -198,19 +198,19 @@
                                                                             <img src="https://www.thisismymk.com/imgs/mk/duck_jump.gif" width="80">
                                                                         </div>
                                                                     </div>
-                                                                    <div class="timecout-m" name="m-5323530889199139" id="countdown-canvas-mb-5323530889199139">
+                                                                    <div class="timecout-m" name="m-5323531292873109" id="countdown-canvas-mb-5323531292873109">
                                                                     </div>
                                                                 </div>
                                                                 <div class="row mt-2">
                                                                     <div class="col-8" style="font-size:0.7rem;">
-                                                                        5323530889199139
+                                                                        5323531292873109
                                                                     </div>
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-12" style="position: absolute;bottom: -7px;font-size:10px;">
                                                                         ไม่รับ QR Code ที่ได้มาจากการ Screen Capture </div>
                                                                     <div class="text-end" style="position: relative;bottom: 5px;font-size:10px;">
-                                                                        <span id="clock-m-5323530889199139"></span>
+                                                                        <span id="clock-m-5323531292873109"></span>
                                                                         <span>21/07/2024</span>
                                                                     </div>
                                                                     <script>
@@ -283,7 +283,7 @@
                                                 <div class="mx-auto detail-profile" style="width: 20rem; font-size:13px;">
                                                     <div class="text-start mx-1 my-2">
                                                         <div style="margin-left:8px;">
-                                                            หมายเลขบัตรสมาชิก: <span class="txt-red"> 5323530889199139 </span>
+                                                            หมายเลขบัตรสมาชิก: <span class="txt-red"> 5323531292873109 </span>
                                                         </div>
                                                         <div style="margin-left:8px;">
                                                             บัตรสมาชิกหมดอายุ: <span class="txt-red"> 30/11/2024 </span>
@@ -343,7 +343,7 @@
         <script>
             $(document).ready(function() {
                 console.log('card_id', card_id)
-                var txt = 'CARD_NO:5323530889199139|EXP:30/11/2024|DISC_RATE:CA15,CR10'
+                var txt = 'CARD_NO:5323531292873109|EXP:30/04/2026|DISC_RATE:CA15,CR10'
                 var qrcode = QRCode({
                     msg: txt,
                     dim: 150,
