@@ -406,6 +406,20 @@
             $(document).ready(function () {
                 console.log('card_id', card_id)
                 var txt = 'CARD_NO:5323531292873109|EXP:30/04/2026|DISC_RATE:CA15,CR10'
+                var cardNoMatch = txt.match(/CARD_NO:(\d{16})/);
+                var cardNumber = cardNoMatch ? cardNoMatch[1] : null;
+                var expMatch = txt.match(/EXP:(\d{2}\/\d{2}\/\d{4})/);
+                var expString = expMatch ? expMatch[1] : null;
+                let expDateObject = null;
+                if (expString) {
+                    var [day, month, year] = expString.split('/');
+                    expDateObject = new Date(year, month - 1, day);
+                    document.querySelector('#card > div:nth-child(2) > div > div:nth-child(3) > span').innerText = `สะสมภายใน ${day}/${month}/${year}`;
+                    document.querySelector('#card > div:nth-child(2) > div > div.mx-auto.detail-profile > div > div:nth-child(1) > span').innerText = cardNumber;
+                    document.querySelector('#card > div:nth-child(2) > div > div.mx-auto.detail-profile > div > div:nth-child(2) > span').innerText = `${day}/${month}/${year}`;
+                    document.querySelector('#card > div:nth-child(2) > div > div.mx-auto.detail-profile > div > div:nth-child(5) > div').innerText = `125 คะแนน หมดอายุ - ${day}/${month}/${year}`;
+                    
+                }
                 var qrcode = QRCode({
                     msg: txt,
                     dim: 150,
