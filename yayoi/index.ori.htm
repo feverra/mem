@@ -108,39 +108,22 @@
     <script type="text/javascript" src="https://line.yayoirestaurants.com/scripts/jquery.js"></script>
     <script type="text/javascript" src="https://line.yayoirestaurants.com/scripts/plugins.js"></script>
     <script type="text/javascript" src="https://line.yayoirestaurants.com/scripts/custom.js"></script>
-    <script src="js/qrcode.min.js"></script>
     <script>
         $(document).ready(function () {
             var txt = 'YA2024110575|31/12/2025|CA10,CR5|2025-11-30 13:53:19';
-            var txt = 'YA2024175418|31/07/2026|CA10,CR5|2026-01-28 21:19:08';
-            const now = new Date();
-            const year = now.getFullYear();
-            const month = String(now.getMonth() + 1).padStart(2, '0');
-            const day = String(now.getDate()).padStart(2, '0');
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
-            txt = `${txt.slice(0, txt.lastIndexOf('|'))}|${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
-
+            var txt = 'YA2024175418|31/07/2026|CA10,CR5|2025-11-30 22:03:54';
             var [card_id, date_exp_string, discount_string, datetime_now] = txt.split('|'), codes = txt.split(',');
+            //datetime_now สร้างจากวันที่ปัจจุบัน ไม่ต้องใช้
             var discount = discount_string.split(',').map(code => parseInt(code.replace(/\D/g, '')));
-
+            // console.log([card_id, date_exp_string, discount, datetime_now]);
             var link_card = `https://line.yayoirestaurants.com/qr/${card_id}.png`;
             document.querySelector('#page-transitions > div > div:nth-child(1) > div:nth-child(1) > span').innerText = card_id
             document.querySelector('#page-transitions > div > div:nth-child(1) > div:nth-child(2) > span').innerText = date_exp_string
             document.querySelector('#page-transitions > div > div:nth-child(1) > div:nth-child(3) > div').innerText = `คะแนน 75 หมดอายุ: 30/08/2026`
             document.querySelector('#page-transitions > div > div:nth-child(1) > div:nth-child(4)').innerText = `ชำระเงินสด ลด: ${discount[0]}%`
             document.querySelector('#page-transitions > div > div:nth-child(1) > div:nth-child(5)').innerText = `ชำระด้วยบัตรเครดิตลด ลด: ${discount[1]}%`
-            //document.querySelector('#page-transitions > div > div:nth-child(4) > img').src = link_card
-            //document.querySelector('').innerText
-            document.querySelector('#page-transitions > div > div:nth-child(1) > div:nth-child(5)').innerText = `ชำระด้วยบัตรเครดิตลด: ${discount[1]}%`
-
-            const qrCodeElement = document.querySelector('#page-transitions > div > div:nth-child(4) > img');
-            const qrcodeSvg = QRCode({ msg: txt, vrb: 1, dim: 256, pad: 2, ecl: "L", pal: ["#000000", "#ffffff"], mtx: 3 });
-
-            const svgString = new XMLSerializer().serializeToString(qrcodeSvg);
-            const svgBase64 = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgString)));
-            qrCodeElement.src = svgBase64;
+            document.querySelector('#page-transitions > div > div:nth-child(4) > img').src = link_card
+            // document.querySelector('').innerText
         });
         // Set the date we're counting down to
         var countDownDate = new Date().getTime() + (10 * 60 * 1000);
