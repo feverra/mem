@@ -1,0 +1,78 @@
+/*!
+ *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+    font-family: "Prompt";
+    src: url("../Prompt/Prompt-Regular.ttf");
+    font-weight: normal !important;
+    font-style: normal !important;
+    /* font-size: 20px; */
+}
+
+@font-face {
+    font-family: "Prompt-Bold";
+    src: url("../Prompt/Prompt-Bold.ttf");
+    font-weight: normal !important;
+    font-style: normal !important;
+}
+
+@font-face {
+    font-family: "Prompt-Semi-Bold";
+    src: url("../Prompt/Prompt-SemiBold.ttf");
+    font-weight: normal !important;
+    font-style: normal !important;
+}
+
+
+body {
+    font-family: Prompt !important;
+    font-size: 18px;
+}
+
+b,
+strong {
+    font-family: Prompt-Semi-Bold;
+    font-weight: normal !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Prompt-Bold;
+}
+
+h2 a:after {
+    bottom: -14px;
+}
+
+.selectboxit-container * {
+    font-family: Prompt;
+    font-size: 22px;
+}
+
+.tooltip {
+    font-family: Prompt;
+    font-size: 18px;
+}
+
+option {
+    font-family: Prompt;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.select2-container-multi .select2-choices .select2-search-field input {
+    font-family: Prompt !important;
+    font-size: 22px !important;
+}
+
+.select2-search input {
+    font-family: Prompt !important;
+    font-size: 22px !important;
+}
